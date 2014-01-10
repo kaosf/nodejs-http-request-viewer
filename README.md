@@ -25,6 +25,13 @@ and then access to a URL like `http://localhost:8080/a/b/c?x=1&y=2`.
 
 The first web browser's window will show you the HTTP request detail.
 
+## References
+
+* http://socket.io/#how-to-use
+* http://blog.choilabo.com/20120320/31
+* http://stackoverflow.com/questions/7140844/jquery-animations-when-appending-html
+* http://stackoverflow.com/questions/3073869/in-jquery-is-prepend-hide-fadein-not-so-smooth
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
