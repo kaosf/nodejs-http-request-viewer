@@ -32,6 +32,52 @@ The first web browser's window will show you the HTTP request detail.
 * http://stackoverflow.com/questions/7140844/jquery-animations-when-appending-html
 * http://stackoverflow.com/questions/3073869/in-jquery-is-prepend-hide-fadein-not-so-smooth
 
+## Deployment on Heroku
+
+Modify the URL in `index.html`.
+
+```diff
+ <script>
+-  var socket = io.connect('http://localhost:8080');
++  var socket = io.connect('http://yourappname.herokuapp.com');
+   socket.on('prepend-log', function (data) {
+```
+
+Add configurations for Socket.IO on Heroku.
+
+```diff
+ io = (require 'socket.io').listen app
+ 
++io.configure ->
++  io.set 'transports', ['xhr-polling']
++  io.set 'polling duration', 10
++
+ app.listen (process.env.PORT || 8080)
+```
+
+Turn down the log level to 1 (warn). Default level is 3 (debug). It's too loud.
+
+```diff
+ io.configure ->
+   io.set 'transports', ['xhr-polling']
+   io.set 'polling duration', 10
++  io.set 'log level', 1
+ 
+ app.listen (process.env.PORT || 8080)
+```
+
+Prepare `Procfile` for Foreman on Heroku.
+
+```yaml
+web: node app.js
+```
+
+### References
+
+* http://qiita.com/takc923/items/2d1ad6bc8a6e4b910d14
+* https://devcenter.heroku.com/articles/node-websockets
+* http://blog.craftgear.net/4f99e27daa1d381e04000001/title
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
