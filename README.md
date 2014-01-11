@@ -15,7 +15,7 @@ Execute following commands;
 ```sh
 npm install
 # app.coffee will be compiled automatically
-node app
+node app.js
 ```
 
 Access to `http://localhost:8080` with your web browser.
