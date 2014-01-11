@@ -54,12 +54,6 @@ Add configurations for Socket.IO on Heroku.
  app.listen (process.env.PORT || 8080)
 ```
 
-Prepare `Procfile` for Foreman on Heroku.
-
-```yaml
-web: node app.js
-```
-
 ### References
 
 * http://qiita.com/takc923/items/2d1ad6bc8a6e4b910d14
