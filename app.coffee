@@ -31,6 +31,18 @@ handler = (req, res) ->
       return
     return
   else
+    if req.method isnt 'GET'
+      data = ''
+      req.setEncoding 'utf-8'
+      req.on 'data', (chunk) ->
+        data += chunk
+        return
+      req.on 'end', ->
+        io.sockets.emit 'prepend-log', "#{formatReqestToString req}\n#{data}"
+        res.writeHead 200
+        res.end 'Success'
+        return
+      return
     io.sockets.emit 'prepend-log', (formatReqestToString req)
     res.writeHead 200
     res.end 'Success'
