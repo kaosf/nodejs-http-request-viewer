@@ -39,4 +39,7 @@ handler = (req, res) ->
 app = (require 'http').createServer handler
 io = (require 'socket.io').listen app
 
+io.configure ->
+  io.set 'log level', 1
+
 app.listen (process.env.PORT || 8080)
