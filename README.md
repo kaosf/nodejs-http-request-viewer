@@ -46,22 +46,10 @@ Modify the URL in `index.html`.
 Add configurations for Socket.IO on Heroku.
 
 ```diff
- io = (require 'socket.io').listen app
- 
-+io.configure ->
+ io.configure ->
+   io.set 'log level', 1
 +  io.set 'transports', ['xhr-polling']
 +  io.set 'polling duration', 10
-+
- app.listen (process.env.PORT || 8080)
-```
-
-Turn down the log level to 1 (warn). Default level is 3 (debug). It's too loud.
-
-```diff
- io.configure ->
-   io.set 'transports', ['xhr-polling']
-   io.set 'polling duration', 10
-+  io.set 'log level', 1
  
  app.listen (process.env.PORT || 8080)
 ```
