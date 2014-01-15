@@ -8,7 +8,13 @@ This is a HTTP Request Viewer with Socket.IO.
 
 ## Usage
 
-Clone this repository or download a ZIP file.
+Clone this repository
+
+```sh
+git clone https://github.com/kaosf/nodejs-http-request-viewer
+```
+
+or download a ZIP file.
 
 Execute following commands;
 
