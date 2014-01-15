@@ -2,6 +2,8 @@
 
 This is a HTTP Request Viewer with Socket.IO.
 
+Version 0.0.1.
+
 ## Requirement
 
 * Node.js
