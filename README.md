@@ -16,9 +16,15 @@ Clone this repository
 git clone https://github.com/kaosf/nodejs-http-request-viewer
 ```
 
-or download a ZIP file.
+or download a ZIP (or tar.gz) file.
 
-Execute following commands;
+```sh
+wget https://github.com/kaosf/nodejs-http-request-viewer/archive/0.0.1.zip
+# or
+wget https://github.com/kaosf/nodejs-http-request-viewer/archive/0.0.1.tar.gz
+```
+
+And then, execute following commands;
 
 ```sh
 npm install
