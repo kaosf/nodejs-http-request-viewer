@@ -14,7 +14,7 @@ Execute following commands;
 
 ```sh
 npm install
-# app.coffee will be compiled automatically
+# app.coffee will be compiled to app.js automatically
 node app.js
 ```
 
