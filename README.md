@@ -78,4 +78,4 @@ Add configurations for Socket.IO on Heroku.
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright 2014 ka
+Copyright © 2014 ka
